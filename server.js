@@ -50,3 +50,7 @@ app.post('/jurnal', (req, res) => {
         res.status(500).json({ pesan: "Gagal menyimpan jurnal." });
     }
 });
+
+app.listen(PORT, () => {
+    console.log(`Server Jurnal berjalan di http://localhost:${PORT}`);
+});
