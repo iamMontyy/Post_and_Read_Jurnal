@@ -1,6 +1,5 @@
 const express = require('express');
 const fs = require('fs'); 
-
 const app = express();
 const PORT = 3000;
 app.use(express.json());
@@ -39,13 +38,12 @@ app.post('/jurnal', (req, res) => {
             isi: isi
         };
 
-        
         dataJurnal.push(jurnalBaru);
 
     
         fs.writeFileSync(FILE_DATABASE, JSON.stringify(dataJurnal, null, 2));
 
-        res.status(201).json({ pesan: "Jurnal berhasil disimpan permanen!", data: jurnalBaru });
+        res.status(201).json({ pesan: "Jurnal berhasil disimpan di database!", data: jurnalBaru });
     } catch (error) {
         res.status(500).json({ pesan: "Gagal menyimpan jurnal." });
     }
