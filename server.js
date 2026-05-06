@@ -3,8 +3,6 @@ const fs = require('fs');
 const app = express();
 const PORT = 3000;
 app.use(express.json());
-
-
 const FILE_DATABASE = './database.json';
 
 app.get('/jurnal', (req, res) => {
@@ -50,5 +48,5 @@ app.post('/jurnal', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server Jurnal berjalan di http://localhost:${PORT}`);
+    console.log(`Server berjalan di http://localhost:${PORT}`);
 });
