@@ -14,9 +14,9 @@ app.get('/jurnal', (req, res) => {
         const dataJurnal = JSON.parse(dataTeks);
 
         
-        res.json({ pesan: "Berhasil mengambil data! jurnal", data: dataJurnal });
+        res.json({ pesan: "Berhasil mengambil data! jurnal kamu", data: dataJurnal });
     } catch (error) {
-        res.status(500).json({ pesan: "Gagal mengambil data jurnal!" });
+        res.status(500).json({ pesan: "Gagal mengambil data jurnal kamu!" });
     }
 });
 
